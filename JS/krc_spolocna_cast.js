@@ -56,3 +56,7 @@ function pageLoadCounter() {
     localStorage.setItem("loadCounter", n);
     document.getElementById("counter").innerHTML = "Počet prístupov na stránku: " + n.toString();
 }
+
+function clearLocalStorage(){
+    localStorage= null;
+}
