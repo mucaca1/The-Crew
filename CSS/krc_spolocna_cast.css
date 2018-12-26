@@ -1,0 +1,48 @@
+.avataricon {
+	padding: 0px 5px;
+	list-style-image: url('./');
+}
+
+.addressicon {
+	padding: 0px 0px;
+	list-style-image: url('./Icon/png/home.png');
+}
+
+.phonenumbericon {
+	padding: 0px 0px;
+	list-style-image: url('./Icon/png/mobile.png');
+}
+
+.mailicon {
+	padding: 0px 0px;
+	list-style-image: url('./Icon/png/mail.png');
+}
+
+.center{
+    text-align: center;
+}
+
+.underline{
+	max-width: 400px;
+    border-bottom: 2px solid black ;
+}
+
+.foo_icon{
+	margin-right: 8px;
+}
+
+a:link {
+	text-decoration: none;
+  }
+  
+  a:visited {
+	text-decoration: none;
+  }
+  
+  a:hover {
+	text-decoration: underline;
+  }
+  
+  a:active {
+	text-decoration: underline;
+  }
