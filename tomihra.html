@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SkupinoveZadanie</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="./CSS/prisup_k_strankam.css" type="text/css">
+    <link rel="stylesheet" href="./CSS/default.css" type="text/css">
+
+    <!--CSS pre tlac-->
+    <link rel="stylesheet" href="./CSS/print-style.css" type="text/css" media="print,projection">
+
+    <!--JS-->
+    <script src="./JS/krc_spolocna_cast.js"></script>
+    <script src="./JS/menu.js"></script>
+
+</head>
+
+<body onload="start();generateMenu();">
+
+    <header id="pageHeader">
+        <h1 id="pageTitle"> <a href="kontakt.html"> TMM BLOG</a></h1>
+        <div class="container">
+            <div class="row" id="menu">
+            </div>
+        </div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb" id="breadcrumb">
+            </ol>
+        </nav>
+
+    </header>
+
+    <article>
+    HRA OD TOMASA!
+
+    </article>
+
+    <div id="endSeparator"></div>
+    <footer>
+        <div class="container">
+            <div class="rowFooter">
+                <div class="col-xs-6">
+                    <p>© 2018 Macho, Belák, Krč</p>
+                </div>
+                <div class="col-xs-6">
+                    <p id="counter"></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

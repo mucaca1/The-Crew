@@ -1,3 +1,9 @@
+
+function start(){
+    pageLoadCounter();
+    lastPages();
+}
+
 /* Prida a zobrazi pocet navstevnosti na stranku */
 function pageLoadCounter() {
     let n = localStorage.getItem("loadCounter");
@@ -26,6 +32,7 @@ function supports_html5_storage() {
 
   /* Prida a zaroven zobrazuje posledne navstivene stranky */
 function lastPages(){
+
     if (!supports_html5_storage())
         {console.log("supportsLocalStorage nie je podporovany"); return; }
     console.log("supportsLocalStorage je podporovany");
@@ -45,14 +52,16 @@ function lastPages(){
         }
         localStorage[i] = window.location.href;
     }
-    
-    var put = document.getElementById('past');
+
+    var put = document.getElementById('breadcrumb');
 
     for(i = 0; i < 5 ; i++){
         if(localStorage[i] == 'undefined'){
             break;
         }
         else{
+
+            let li = document.createElement('li');
             let a = document.createElement('a');
 
             let endIndex = localStorage[i].indexOf('.html');
@@ -60,22 +69,27 @@ function lastPages(){
             let startIndex = sub.lastIndexOf('/');
             sub = localStorage[i].substring(startIndex+1,endIndex);
             let linkText = null;
-            if(localStorage[i+1] == 'undefined' | i == localStorage.length -1 ){
-                linkText = document.createTextNode(sub);
-            }
-            else{
-                linkText = document.createTextNode(sub + " -> ");
-            }
-            a.appendChild(linkText);
-            a.title = localStorage[i];
-            a.href = localStorage[i];
-            put.appendChild(a);
+            linkText = document.createTextNode(sub);
+
+            if(localStorage[i+1] == 'undefined' | i == localStorage.length -1 | i == 4){
+                li.setAttribute("class","breadcrumb-item active")
+                li.setAttribute("aria-current","page");
+                li.innerHTML = sub;
+
+            } else {
+
+                a.appendChild(linkText);
+                a.title = localStorage[i];
+                a.href = localStorage[i];
+                li.appendChild(a);
+
+              }
+              
+            put.appendChild(li);  
 
             a = null;
         }
     }
-    console.log('nacital som');
-    console.log(pages);
 }
 
 /* Maze local storage */
