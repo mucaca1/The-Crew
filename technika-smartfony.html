@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./CSS/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="./CSS/prisup_k_strankam.css" type="text/css">
     <link rel="stylesheet" href="./CSS/default.css" type="text/css">
+    <link rel="stylesheet" href="./CSS/clanky-style.css" type="text/css">
 
     <!--CSS pre tlac-->
     <link rel="stylesheet" href="./CSS/print-style.css" type="text/css" media="print,projection">
@@ -18,10 +19,11 @@
     <!--JS-->
     <script src="./JS/krc_spolocna_cast.js"></script>
     <script src="./JS/menu.js"></script>
+    <script src="./JS/clanky.js"></script>
 
 </head>
 
-<body onload="start();generateMenu();">
+<body onload="start();generateMenu();loadSubCategory(1);">
 
     <header id="pageHeader">
         <h1 id="pageTitle"> <a href="kontakt.html"> TMM BLOG</a></h1>
@@ -37,8 +39,13 @@
     </header>
 
     <article>
-    TECHNIKA - SMARTFONY!
+        <div class="container">
 
+            <div class="articlesRow" id="articlesDiv">
+
+            </div>
+
+        </div>
     </article>
 
     <div id="endSeparator"></div>

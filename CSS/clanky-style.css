@@ -1,0 +1,45 @@
+
+
+.clanok-zaujimavosti-ludia {
+    background-color: #FFEFD5;
+}
+
+.clanok-zaujimavosti-miesta {
+    background-color:  #FED8B1;
+}
+
+.clanok-technika-gadgets {
+    background-color:#FBCEB1;
+}
+
+.clanok-technika-smartfony {
+    background-color:#FDBCB4;
+}
+
+.clanok {
+    margin: 10px;
+    padding: 10px;
+}
+
+img {
+    padding: 0px;
+    width: 100%;
+    border: 0px;
+    height: auto;
+}
+
+.source {
+    background-color: gray;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+}
+
+.src {
+    color: white;
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+}
