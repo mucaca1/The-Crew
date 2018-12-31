@@ -19,9 +19,20 @@
     <script src="./JS/krc_spolocna_cast.js"></script>
     <script src="./JS/menu.js"></script>
 
+    <!--Web drag and drop-->
+    <link rel="stylesheet" href=".\game_krc\krc_style.css">
+	<link rel="stylesheet" href=".\game_krc\jquery-ui.css">
+	<script type="text/javascript" src=".\game_krc\krc_script.js"></script>
+
+    <!--Mobil-->
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+
+	<script src="./game_krc/jquery.ui.touch-punch.min.js"></script>
+
 </head>
 
-<body onload="start();generateMenu();">
+<body onload="load_JSON();start();generateMenu();">
 
     <header id="pageHeader">
         <h1 id="pageTitle"> <a href="kontakt.html"> TMM BLOG</a></h1>
@@ -37,7 +48,30 @@
     </header>
 
     <article>
-    HRA OD MATA!
+        <h1>Matej Krč - Minihra</h1>
+		<p>Postav ma kde chceš</p>
+			<div class="view">
+				<input type="checkbox" onclick="colision(this)"> collision box
+				<div class="button-s" onclick="animation()">DEMO</div>
+				<p id="timer"></p>
+					<div id = "play_area">
+						
+					</div>
+			</div>
+			<div id="black">
+			</div>
+			<div id="questionStart" class="table">
+				<p>Si pripravený?</p>
+				<div class="button-b yes" onclick="buttonStart()">Áno</div>
+				<div class="button-b no" onclick="buttonExit()">Nie</div>
+			</div>
+			<div class="table" id="wictoryTable">
+				<p>Vyhral si!</p>
+				<p>Tvoj cas je : </p>
+				<p id="winnerTime"></p>
+				<div class="button-b yes" onclick="repeat()">Opakovať</div>
+				<div class="button-b no" onclick="buttonExit()">Späť na stránku</div>
+			</div>
 
     </article>
 
