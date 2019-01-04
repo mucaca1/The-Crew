@@ -139,7 +139,6 @@ if (Math.floor(Math.random() * 2) == 0){
     createArticle(category+1,2)
 
 }
-
 }
 
 
@@ -155,17 +154,21 @@ function createArticle(subcategory,articleIndex){
     let articlesRow = document.getElementById("articlesDiv");
 
     let column = document.createElement('div');
-    column.setAttribute("class","col-sm-4");
+    column.setAttribute("class","colt");
     articlesRow.appendChild(column);
 
     let article = document.createElement('div');
     
     switch(subcategory){
 
-        case 0: article.setAttribute("class","clanok clanok-technika-gadgets"); break;
-        case 1: article.setAttribute("class","clanok clanok-technika-smartfony"); break;
-        case 2: article.setAttribute("class","clanok clanok-zaujimavosti-ludia"); break;
-        case 3: article.setAttribute("class","clanok clanok-zaujimavosti-miesta"); break;
+        case 0: article.setAttribute("class","clanok clanok-technika-gadgets");
+                article.style.backgroundColor = '#FBCEB1'; break;
+        case 1: article.setAttribute("class","clanok clanok-technika-smartfony");
+                article.style.backgroundColor = '#FDBCB4'; break;
+        case 2: article.setAttribute("class","clanok clanok-zaujimavosti-ludia");
+                article.style.backgroundColor = '#FFEFD5'; break;
+        case 3: article.setAttribute("class","clanok clanok-zaujimavosti-miesta");
+                article.style.backgroundColor = '#FED8B1'; break;
 
     }
 
@@ -203,3 +206,10 @@ function createArticle(subcategory,articleIndex){
 
 }
 
+function setColor(){
+  let divs = document.getElementsByClassName('colt');
+  for(let i = 0 ; i < divs.length ; i++){
+    var t = divs[i].childNodes[0].style.backgroundColor;
+    divs[i].style.backgroundColor = t;
+  }
+}

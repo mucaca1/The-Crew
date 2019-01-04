@@ -431,6 +431,8 @@ async function animation(){
     position = joinWithoutConnect(hlava, 69,54);
     $("#oko").animate({ top: position.top + "px", left: position.left + "px"}, 1000);
     await sleep(1000);
+    clearInterval(timeCounter);
+    timeCounter = null;
     victory();
 }
 

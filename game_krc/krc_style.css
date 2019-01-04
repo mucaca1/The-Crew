@@ -18,13 +18,18 @@ article{
     display: block;
     position: fixed;
     left: 10%;
-    top: 10%;
+    top: 20%;
     margin: auto;
-    background: yellow;
+    background: #333333;
     width: 80%;
     height: 80%;
-    font-size: 60px;
+    font-size: 30px;
     text-align: center;
+    color: white;
+}
+
+.contentchoice{
+    margin-top: 20%;
 }
 
 .button-s{
@@ -44,7 +49,7 @@ article{
     border: 2px solid gray;
     display: inline-block;
     border-radius: 10%;
-    font-size: 40px;
+    font-size: 20px;
 
     text-align: center;
 }

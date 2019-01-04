@@ -1,20 +1,20 @@
+/*
 
-
-.clanok-zaujimavosti-ludia {
+.clanok-zaujimavosti-ludia > div {
     background-color: #FFEFD5;
 }
 
-.clanok-zaujimavosti-miesta {
-    background-color:  #FED8B1;
+.clanok-zaujimavosti-miesta > div{
+    background-color: #FED8B1;
 }
 
-.clanok-technika-gadgets {
+.clanok-technika-gadgets > div{
     background-color:#FBCEB1;
 }
 
-.clanok-technika-smartfony {
+.clanok-technika-smartfony > div{
     background-color:#FDBCB4;
-}
+}*/
 
 .clanok {
     margin: 10px;
@@ -43,3 +43,25 @@ iframe {
     width: 100%;
     height: auto;
 }
+
+#articlesDiv {
+    display: table;
+    width: 100%;
+  }
+
+  .colt {
+    display: table-cell;
+    /*background-color: #FBCEB1;*/
+    
+  }
+
+  .clanok-obsah{
+    padding: 16px;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .colt { 
+      display: block;
+      width: 100%;
+    }
+  }

@@ -32,7 +32,7 @@
 
 </head>
 
-<body onload="load_JSON();start();generateMenu();">
+<body onload="load_JSON();generateMenu();">
 
     <header id="pageHeader">
         <h1 id="pageTitle"> <a href="kontakt.html"> TMM BLOG</a></h1>
@@ -61,16 +61,21 @@
 			<div id="black">
 			</div>
 			<div id="questionStart" class="table">
-				<p>Si pripravený?</p>
-				<div class="button-b yes" onclick="buttonStart()">Áno</div>
-				<div class="button-b no" onclick="buttonExit()">Nie</div>
+                <div class="contentchoice">
+                        <p>Si pripravený?</p>
+                        <div class="button-b yes" onclick="buttonStart()">Áno</div>
+                        <div class="button-b no" onclick="buttonExit()">Nie</div>
+                </div>
+				
 			</div>
 			<div class="table" id="wictoryTable">
+                    <div class="contentchoice">
 				<p>Vyhral si!</p>
 				<p>Tvoj cas je : </p>
 				<p id="winnerTime"></p>
 				<div class="button-b yes" onclick="repeat()">Opakovať</div>
-				<div class="button-b no" onclick="buttonExit()">Späť na stránku</div>
+                <div class="button-b no" onclick="buttonExit()">Späť na stránku</div>
+                    </div>
 			</div>
 
     </article>
