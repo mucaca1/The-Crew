@@ -257,3 +257,68 @@ function fillMenu(section, layer, index, index2) {
     }
 
 }
+
+function createMenu(){
+    var menu1;
+    var menu2;
+    var menu3;
+
+    var content1;
+    var content2;
+    var content3;
+    var page;
+    var text;
+
+    menu1 = document.createElement('ul');
+
+    let menu = document.createElement('ul');
+    content1 = document.createElement('li');
+    page = document.createElement('a');
+    text = document.createTextNode('menu');
+    page.appendChild(text);
+    page.href = '#';
+    content1.appendChild(page);
+    menu.appendChild(content1);
+    menu.appendChild(menu1);
+    for(let i = 0; i < menuJSON.menu.length; i++){
+        content1 = document.createElement('li');
+        content1.setAttribute("class", "col-sm-4");
+        page = document.createElement('a');
+        text = document.createTextNode(menuJSON.menu[i].title);
+        page.appendChild(text);
+        page.href = menuJSON.menu[i].href;
+        content1.appendChild(page);
+        menu1.appendChild(content1);
+
+        if(menuJSON.menu[i].menu != null){
+            menu2 = document.createElement('ul');
+            for(let i2 = 0 ; i2 < menuJSON.menu[i].menu.length ; i2++){
+                content2 = document.createElement('li');
+                page = document.createElement('a');
+                text = document.createTextNode(menuJSON.menu[i].menu[i2].title);
+                page.appendChild(text);
+                page.href = menuJSON.menu[i].menu[i2].href;
+                content2.appendChild(page);
+                menu2.appendChild(content2);
+                if(menuJSON.menu[i].menu[i2].menu != null){
+                    menu3 = document.createElement('ul');
+                    for(let i3 = 0 ; i3 < menuJSON.menu[i].menu[i2].menu.length ; i3++){
+                        content3 = document.createElement('li');
+                        page = document.createElement('a');
+                        text = document.createTextNode(menuJSON.menu[i].menu[i2].menu[i3].title);
+                        page.appendChild(text);
+                        page.href = menuJSON.menu[i].menu[i2].menu[i3].href;
+                        content3.appendChild(page);
+                        menu3.appendChild(content3);
+                    }
+                    content2.appendChild(menu3);
+                }
+            }
+            content1.appendChild(menu2);
+        }
+        
+        
+    }
+  
+    document.getElementById('menu').appendChild(menu1);
+}
