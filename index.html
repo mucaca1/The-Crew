@@ -18,11 +18,12 @@
     <!--JS-->
     <script src="./JS/krc_spolocna_cast.js"></script>
     <script src="./JS/menu.js"></script>
-	<script src="./JS/func.js"></script>
+    <script src="./JS/func.js"></script>
+    <script src="./JS/tabulkajs.js"></script>
 
 </head>
 
-<body onload="start();generateMenu();">
+<body onload="start();generateMenu();createTable();">
 
     <header id="pageHeader">
         <h1 id="pageTitle"> <a href="kontakt.html"> TMM BLOG</a></h1>
@@ -37,36 +38,43 @@
 
     </header>
 
-	<div id="one">
-        <p><span id="day"></span><span id="date"></span></p>
-    </div>
-    <div id="choose">
-        <form action="" class="form">
-            <input type="radio" name="choice" id="sk" onchange="change1()"> Slovenské<br>
-            <input type="radio" name="choice" id="cz" onchange="change2()"> České<br>
-            <input type="radio" name="choice" id="hu" onchange="change3()"> Maďarské<br>
-            <input type="radio" name="choice" id="pl" onchange="change4()"> Poľské<br>
-            <input type="radio" name="choice" id="au" onchange="change5()"> Rakúske<br>
-            <input type="radio" name="choice" id="sksv" onchange="change6()"> Slovenský sviatok<br>
-        </form>
-    </div>
-    <div id="two">
-        <p><span id="name"></span><span id="names"></span></p>
-    </div>
-    <div id="input">
-        <input type="date" id="ud">
-        <input type="text" id="un">
-        <input type="button" onclick="findD()" value="Dátum">
-        <input type="button" onclick="findN()" value="Meno">
-        <br>
-        <p><span id="n"></span><br><span id="d"></span><span id="d1"></span><span id="d2"></span><span id="d3"></span>
-        <br>
-        <span id="d4"></span><span id="d5"></span><span id="d6"></span><span id="d7"></span><span id="d8"></span><span id="d9"></span>
-        </p>
-    </div>
+	
 	
     <article>
-    UVOD!
+        <div class="center">
+                <div id="one">
+                        <p><span id="day"></span><span id="date"></span></p>
+                    </div>
+                    <div id="choose">
+                        <form action="" class="form">
+                            <input type="radio" name="choice" id="sk" onchange="change1()"> Slovenské<br>
+                            <input type="radio" name="choice" id="cz" onchange="change2()"> České<br>
+                            <input type="radio" name="choice" id="hu" onchange="change3()"> Maďarské<br>
+                            <input type="radio" name="choice" id="pl" onchange="change4()"> Poľské<br>
+                            <input type="radio" name="choice" id="au" onchange="change5()"> Rakúske<br>
+                            <input type="radio" name="choice" id="sksv" onchange="change6()"> Slovenský sviatok<br>
+                        </form>
+                    </div>
+                    <div id="two">
+                        <p><span id="name"></span><span id="names"></span></p>
+                    </div>
+                    <div id="input">
+                        <input type="date" id="ud">
+                        <input type="text" id="un">
+                        <input type="button" onclick="findD()" value="Dátum">
+                        <input type="button" onclick="findN()" value="Meno">
+                        <br>
+                        <p><span id="n"></span><br><span id="d"></span><span id="d1"></span><span id="d2"></span><span id="d3"></span>
+                        <br>
+                        <span id="d4"></span><span id="d5"></span><span id="d6"></span><span id="d7"></span><span id="d8"></span><span id="d9"></span>
+                        </p>
+                    </div>
+
+                    
+        </div>
+        
+        <div id="table" class="centerd"></div>
+        
 
     </article>
 
