@@ -297,11 +297,18 @@ function control(){
     position1 = getOffset(position1);
     position2 = getOffset(position2);
 
-    //console.log(position2[0] - position1[0]);
+    console.log("values");
+    console.log(position2[0] - position1[0]);
+
+    //position 1 - body   body-head  -150   347 nizsie
+    //position 2 - head   head-body  +150   199 vyssie
+
     if(position2.left - position1.left - estimate  && position2.left - position1.left < x + estimate){
         first = true;
     }
-    //console.log(position2[1] - position1[1]);
+    console.log(position2[1] - position1[1]);
+    //199 - 347 =  -148
+    //347 - 199 = 148
     if(position2.top - position1.top > y-estimate && position2.top - position1.top < y + estimate){
         second = true;
     }

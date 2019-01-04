@@ -11,17 +11,25 @@
     <link rel="stylesheet" href="./CSS/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="./CSS/prisup_k_strankam.css" type="text/css">
     <link rel="stylesheet" href="./CSS/default.css" type="text/css">
+    <link rel="stylesheet" href="./game_tomi/macho_game_style.css" type="text/css">
 
     <!--CSS pre tlac-->
     <link rel="stylesheet" href="./CSS/print-style.css" type="text/css" media="print,projection">
 
+    <!--Web drag and drop-->
+    <link rel="stylesheet" href=".\game_krc\jquery-ui.css">
+
     <!--JS-->
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+	<script src="./game_krc/jquery.ui.touch-punch.min.js"></script>
     <script src="./JS/krc_spolocna_cast.js"></script>
     <script src="./JS/menu.js"></script>
+    <script type="text/javascript" src=".\game_tomi\macho_game.js"></script>
 
 </head>
 
-<body onload="start();generateMenu();">
+<body onload="start();generateMenu();loadGameAndStart();">
 
     <header id="pageHeader">
         <h1 id="pageTitle"> <a href="kontakt.html"> TMM BLOG</a></h1>
@@ -37,8 +45,11 @@
     </header>
 
     <article>
-    HRA OD TOMASA!
-
+    <h1>Tomáš Macho - Minihra</h1>
+    <p id="gameTime">Uplynutý čas: 0h 0m 0s</p>
+    <p id="winLabel"></p>
+    <button id = "demoRestartButton" onclick="demoRestartButtonClicked()">DEMO</button>
+    <div id = "gameDiv"></div>
     </article>
 
     <div id="endSeparator"></div>
